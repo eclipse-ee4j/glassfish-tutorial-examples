@@ -31,7 +31,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>${maven.exec.plugin.version}</version>
                 <configuration>
-                    <mainClass>javaeetutorial.trading.eis.TradeExecServer</mainClass>
+                    <mainClass>jakarta.tutorial.trading.eis.TradeExecServer</mainClass>
                 </configuration>
             </plugin>
             <plugin>

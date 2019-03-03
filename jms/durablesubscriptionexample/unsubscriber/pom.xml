@@ -36,7 +36,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.unsubscriber.Unsubscriber</mainClass>
+                            <mainClass>jakarta.tutorial.unsubscriber.Unsubscriber</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

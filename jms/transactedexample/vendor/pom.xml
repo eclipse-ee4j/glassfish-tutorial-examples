@@ -36,7 +36,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.vendor.Vendor</mainClass>
+                            <mainClass>jakarta.tutorial.vendor.Vendor</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

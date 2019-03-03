@@ -44,7 +44,7 @@
                                 <wsdlFile>HelloService.wsdl</wsdlFile>
                             </wsdlFiles>
                             <wsdlLocation>http://localhost:8080/helloservice/HelloService?WSDL</wsdlLocation>
-                            <packageName>javaeetutorial.helloservice.endpoint</packageName>
+                            <packageName>jakarta.tutorial.helloservice.endpoint</packageName>
                         </configuration>
                         <phase>generate-sources</phase>
                     </execution>

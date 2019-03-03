@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.clientackconsumer.ClientAckConsumer</mainClass>
+                            <mainClass>jakarta.tutorial.clientackconsumer.ClientAckConsumer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

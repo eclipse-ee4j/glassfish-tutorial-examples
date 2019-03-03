@@ -40,7 +40,7 @@
                             <goal>wsgen</goal>
                         </goals>
                         <configuration>
-                            <sei>javaeetutorial.helloservice.Hello</sei>
+                            <sei>jakarta.tutorial.helloservice.Hello</sei>
                             <genWsdl>true</genWsdl>
                         </configuration>
                     </execution>

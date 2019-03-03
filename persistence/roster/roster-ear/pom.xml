@@ -55,7 +55,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>                      
-                            <mainClass>javaeetutorial.roster.client.RosterClient</mainClass>
+                            <mainClass>jakarta.tutorial.roster.client.RosterClient</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

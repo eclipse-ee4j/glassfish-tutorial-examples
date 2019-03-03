@@ -20,7 +20,7 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
     
-    <groupId>org.glassfish.javaeetutorial.security</groupId>
+    <groupId>jakarta.tutorial.security</groupId>
     <artifactId>hello1-formauth</artifactId>
     <packaging>war</packaging>
     

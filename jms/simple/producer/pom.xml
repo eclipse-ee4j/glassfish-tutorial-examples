@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.producer.Producer</mainClass>
+                            <mainClass>jakarta.tutorial.producer.Producer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

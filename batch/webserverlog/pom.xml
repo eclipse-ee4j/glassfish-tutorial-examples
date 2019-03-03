@@ -20,7 +20,7 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.glassfish.javaeetutorial.batch</groupId>
+    <groupId>jakarta.tutorial.batch</groupId>
     <artifactId>webserverlog</artifactId>
     <packaging>war</packaging>
     

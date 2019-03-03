@@ -21,7 +21,7 @@
     <application>
         <resource-bundle>
             <base-name>
-                javaeetutorial.dukesbookstore.web.messages.Messages
+                jakarta.tutorial.dukesbookstore.web.messages.Messages
             </base-name>
             <var>bundle</var>
         </resource-bundle>
@@ -45,7 +45,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book201</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>
@@ -82,7 +82,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book202</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>
@@ -119,7 +119,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book203</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>
@@ -156,7 +156,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book205</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>
@@ -193,7 +193,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book206</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>
@@ -230,7 +230,7 @@
             managed-property elements.
         </description>
         <managed-bean-name>Book207</managed-bean-name>
-        <managed-bean-class>javaeetutorial.dukesbookstore.model.ImageArea</managed-bean-class>
+        <managed-bean-class>jakarta.tutorial.dukesbookstore.model.ImageArea</managed-bean-class>
         <managed-bean-scope>application</managed-bean-scope>
         <managed-property>
             <description>

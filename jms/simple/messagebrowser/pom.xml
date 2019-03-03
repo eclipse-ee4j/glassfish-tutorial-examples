@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.messagebrowser.MessageBrowser</mainClass>
+                            <mainClass>jakarta.tutorial.messagebrowser.MessageBrowser</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

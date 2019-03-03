@@ -36,7 +36,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.durableconsumer.DurableConsumer</mainClass>
+                            <mainClass>jakarta.tutorial.durableconsumer.DurableConsumer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -43,7 +43,7 @@
                 <configuration>
                     <archive>
                         <manifest>                            
-                            <mainClass>javaeetutorial.simplemessage.appclient.SimpleMessageClient</mainClass>
+                            <mainClass>jakarta.tutorial.simplemessage.appclient.SimpleMessageClient</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -24,7 +24,7 @@
             <supported-locale>zh</supported-locale>
         </locale-config>
         <resource-bundle>
-            <base-name>javaeetutorial.dukestutoring.web.messages.Messages</base-name>
+            <base-name>jakarta.tutorial.dukestutoring.web.messages.Messages</base-name>
             <var>bundle</var>
         </resource-bundle>
     </application>
