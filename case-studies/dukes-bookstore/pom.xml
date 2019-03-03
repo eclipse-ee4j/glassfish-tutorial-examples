@@ -20,9 +20,7 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
     
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>dukes-bookstore</artifactId>
-    <version>8.1-SNAPSHOT</version>
     <packaging>war</packaging>
     
     <name>dukes-bookstore</name>

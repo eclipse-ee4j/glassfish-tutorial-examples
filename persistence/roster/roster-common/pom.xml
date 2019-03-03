@@ -18,7 +18,6 @@
     <artifactId>roster</artifactId>
     <version>8.1-SNAPSHOT</version>
   </parent>
-  <groupId>jakarta.tutorial</groupId>
   <artifactId>roster-common</artifactId>
   <name>roster-common</name>
 </project>

@@ -20,9 +20,7 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
     
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>security-api</artifactId>
-    <version>8.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>security-api</name>

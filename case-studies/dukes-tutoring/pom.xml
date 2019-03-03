@@ -18,7 +18,6 @@
         <groupId>jakarta.tutorial</groupId>
         <version>8.1-SNAPSHOT</version>
     </parent>
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>dukes-tutoring</artifactId>
     <packaging>pom</packaging>
     <name>dukes-tutoring</name>

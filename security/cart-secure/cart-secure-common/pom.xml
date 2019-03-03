@@ -18,7 +18,6 @@
         <artifactId>cart-secure</artifactId>
         <version>8.1-SNAPSHOT</version>
     </parent>
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>cart-secure-common</artifactId>
     <name>cart-secure-common</name>
 </project>

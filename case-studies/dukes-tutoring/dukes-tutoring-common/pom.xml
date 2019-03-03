@@ -18,7 +18,6 @@
         <artifactId>dukes-tutoring</artifactId>
         <version>8.1-SNAPSHOT</version>
     </parent>
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>dukes-tutoring-common</artifactId>
     <name>dukes-tutoring-common</name>
     <dependencies>

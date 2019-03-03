@@ -18,7 +18,6 @@
     <artifactId>cart</artifactId>
     <version>8.1-SNAPSHOT</version>
   </parent>
-  <groupId>jakarta.tutorial</groupId>
   <artifactId>cart-common</artifactId>
   <name>cart-common</name>
 </project>

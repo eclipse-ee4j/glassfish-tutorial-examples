@@ -20,7 +20,6 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>clientsessionmdb-appclient</artifactId>
     <packaging>app-client</packaging>
 

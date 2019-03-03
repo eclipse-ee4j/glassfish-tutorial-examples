@@ -19,7 +19,6 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
    
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>servlet</artifactId>
     <packaging>pom</packaging>
  

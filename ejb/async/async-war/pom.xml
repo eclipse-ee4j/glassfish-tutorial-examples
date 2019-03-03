@@ -20,7 +20,6 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>async-war</artifactId>
     <packaging>war</packaging>
     <name>${project.artifactId}</name>

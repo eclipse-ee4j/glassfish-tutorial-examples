@@ -19,9 +19,7 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
     
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>guessnumber-jsf</artifactId>
-    <version>8.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>guessnumber-jsf</name>

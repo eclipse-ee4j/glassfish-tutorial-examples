@@ -21,7 +21,6 @@
         <version>8.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>jakarta.tutorial</groupId>
     <artifactId>dukes-payment</artifactId>
     <packaging>war</packaging>
 
