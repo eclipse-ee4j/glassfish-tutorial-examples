@@ -30,8 +30,8 @@ import javax.transaction.xa.XAResource;
 
 @Connector(
         displayName = "TrafficRA",
-        vendorName = "Java EE Tutorial", 
-        version = "7.0"
+        vendorName = "Jakarta EE Tutorial", 
+        version = "8.1-SHAPSHOT"
 )
 public class TrafficResourceAdapter implements ResourceAdapter, Serializable {
     
