@@ -1,4 +1,4 @@
-## Pre requisites
+## Prerequisites
 
 - Maven
 - JDK8
