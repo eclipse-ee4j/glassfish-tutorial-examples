@@ -23,7 +23,7 @@ import javax.transaction.xa.XAResource;
 @Connector(
         displayName = "TradeResourceAdapter",
         vendorName = "Jakarta EE Tutorial", 
-        version = "8.1-SNAPSHOT"
+        version = "8.1"
 )
 public class TradeResourceAdapter implements ResourceAdapter {
    
