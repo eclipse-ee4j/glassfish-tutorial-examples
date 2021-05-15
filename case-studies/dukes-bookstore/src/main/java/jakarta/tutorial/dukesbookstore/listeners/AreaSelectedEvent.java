@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,8 +10,9 @@
 
 package jakarta.tutorial.dukesbookstore.listeners;
 
+import jakarta.faces.event.ActionEvent;
+import jakarta.tutorial.dukesbookstore.components.AreaComponent;
 import jakarta.tutorial.dukesbookstore.components.MapComponent;
-import javax.faces.event.ActionEvent;
 
 /**
  * <p>An {@link ActionEvent} indicating that the specified {@link AreaComponent}

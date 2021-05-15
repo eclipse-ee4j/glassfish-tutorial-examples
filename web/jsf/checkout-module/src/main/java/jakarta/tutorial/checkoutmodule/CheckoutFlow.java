@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,11 +11,12 @@
 package jakarta.tutorial.checkoutmodule;
 
 import java.io.Serializable;
-import javax.enterprise.inject.Produces;
-import javax.faces.flow.Flow;
-import javax.faces.flow.builder.FlowBuilder;
-import javax.faces.flow.builder.FlowBuilderParameter;
-import javax.faces.flow.builder.FlowDefinition;
+
+import jakarta.enterprise.inject.Produces;
+import jakarta.faces.flow.Flow;
+import jakarta.faces.flow.builder.FlowBuilder;
+import jakarta.faces.flow.builder.FlowBuilderParameter;
+import jakarta.faces.flow.builder.FlowDefinition;
 
 public class CheckoutFlow implements Serializable {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,15 +11,16 @@
 package jakarta.tutorial.genericsupplier;
 
 import java.util.Random;
-import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSConsumer;
-import javax.jms.JMSContext;
-import javax.jms.JMSRuntimeException;
-import javax.jms.MapMessage;
-import javax.jms.Message;
-import javax.jms.Queue;
-import javax.jms.Topic;
+
+import jakarta.annotation.Resource;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.JMSConsumer;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSRuntimeException;
+import jakarta.jms.MapMessage;
+import jakarta.jms.Message;
+import jakarta.jms.Queue;
+import jakarta.jms.Topic;
 
 /**
  * The GenericSupplier class receives an item order from the vendor and sends a

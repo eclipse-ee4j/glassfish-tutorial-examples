@@ -11,42 +11,43 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>cart</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>8.1</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial.ejb.cart</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>cart-appclient</artifactId>
-    <packaging>app-client</packaging>
+  <artifactId>cart-appclient</artifactId>
+  <packaging>app-client</packaging>
 
-    <name>cart-appclient</name>
+  <name>cart-appclient</name>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>jakarta.tutorial.cart.client.CartClient</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cart-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-acr-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>jakarta.tutorial.cart.client.CartClient</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cart-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>

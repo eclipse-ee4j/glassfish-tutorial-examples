@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -18,18 +18,19 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.event.Observes;
+import jakarta.json.Json;
+import jakarta.json.stream.JsonGenerator;
 import jakarta.tutorial.dukestutoring.ejb.RequestBean;
-import jakarta.tutorial.dukestutoring.entity.Student;
 import jakarta.tutorial.dukestutoring.events.StatusEvent;
-import javax.ejb.EJB;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.event.Observes;
-import javax.json.Json;
-import javax.json.stream.JsonGenerator;
-import javax.websocket.OnClose;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 @ServerEndpoint("/status")
 @Dependent

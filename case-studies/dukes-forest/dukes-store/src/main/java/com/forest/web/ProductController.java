@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,11 +10,6 @@
 
 package com.forest.web;
 
-import com.forest.ejb.ProductBean;
-import com.forest.entity.Product;
-import com.forest.web.util.AbstractPaginationHelper;
-import com.forest.web.util.JsfUtil;
-import com.forest.web.util.PageNavigation;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -22,17 +17,24 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.EJB;
-import javax.enterprise.context.SessionScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.convert.FacesConverter;
-import javax.faces.model.DataModel;
-import javax.faces.model.ListDataModel;
-import javax.faces.model.SelectItem;
-import javax.inject.Named;
-import javax.servlet.http.Part;
+
+import com.forest.ejb.ProductBean;
+import com.forest.entity.Product;
+import com.forest.web.util.AbstractPaginationHelper;
+import com.forest.web.util.JsfUtil;
+import com.forest.web.util.PageNavigation;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.convert.FacesConverter;
+import jakarta.faces.model.DataModel;
+import jakarta.faces.model.ListDataModel;
+import jakarta.faces.model.SelectItem;
+import jakarta.inject.Named;
+import jakarta.servlet.http.Part;
 
 @Named(value = "productController")
 @SessionScoped

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,12 +12,14 @@ package com.forest.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.xml.bind.annotation.XmlTransient;
+
+import jakarta.json.bind.annotation.JsonbTransient;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
+import jakarta.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -61,6 +63,7 @@ public class Customer extends Person {
         this.groupsList = new ArrayList<Groups>();
     }
     @XmlTransient
+    @JsonbTransient
     public List<CustomerOrder> getCustomerOrderList() {
         return customerOrderList;
     }

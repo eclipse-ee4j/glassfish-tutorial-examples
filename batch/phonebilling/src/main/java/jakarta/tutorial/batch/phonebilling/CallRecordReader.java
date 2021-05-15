@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,12 +13,13 @@ package jakarta.tutorial.batch.phonebilling;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.Serializable;
+
+import jakarta.batch.api.chunk.ItemReader;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.tutorial.batch.phonebilling.items.CallRecord;
-import javax.batch.api.chunk.ItemReader;
-import javax.batch.runtime.context.JobContext;
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 /* Reader batch artifact.
  * Reads call records from the input log file.

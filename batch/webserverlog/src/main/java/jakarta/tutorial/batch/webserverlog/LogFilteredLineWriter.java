@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -14,12 +14,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.Serializable;
 import java.util.List;
+
+import jakarta.batch.api.chunk.ItemWriter;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.tutorial.batch.webserverlog.items.LogFilteredLine;
-import javax.batch.api.chunk.ItemWriter;
-import javax.batch.runtime.context.JobContext;
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 /* Write the filtered items */
 @Dependent

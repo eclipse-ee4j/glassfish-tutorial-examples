@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,11 +11,12 @@
 package jakarta.tutorial.traffic.rar.inbound;
 
 import java.util.logging.Logger;
+
+import jakarta.resource.spi.UnavailableException;
+import jakarta.resource.spi.endpoint.MessageEndpoint;
+import jakarta.resource.spi.endpoint.MessageEndpointFactory;
+import jakarta.resource.spi.work.Work;
 import jakarta.tutorial.traffic.rar.TrafficResourceAdapter;
-import javax.resource.spi.UnavailableException;
-import javax.resource.spi.endpoint.MessageEndpoint;
-import javax.resource.spi.endpoint.MessageEndpointFactory;
-import javax.resource.spi.work.Work;
 
 /* This class is required only because obtaining an MDB endpoint
  * needs to be done in a different thread */

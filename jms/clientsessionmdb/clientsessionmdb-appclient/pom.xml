@@ -11,44 +11,47 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <artifactId>clientsessionmdb</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>8.1</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>clientsessionmdb-appclient</artifactId>
-    <packaging>app-client</packaging>
+  <parent>
+    <groupId>jakarta.tutorial.jms.clientsessionmdb</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <name>clientsessionmdb-appclient</name>
+  <artifactId>clientsessionmdb-appclient</artifactId>
+  <packaging>app-client</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>clientsessionmdb-ejb</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+  <name>clientsessionmdb-appclient</name>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>jakarta.tutorial.clientsessionmdb.appclient.MyAppClient</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>clientsessionmdb-ejb</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-acr-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathLayoutType>custom</classpathLayoutType>
+              <customClasspathLayout>$${artifact.artifactId}.$${artifact.extension}</customClasspathLayout>
+              <mainClass>jakarta.tutorial.clientsessionmdb.appclient.MyAppClient</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,10 +11,11 @@
 package jakarta.tutorial.counter.web;
 
 import java.io.Serializable;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.ConversationScoped;
+import jakarta.inject.Named;
 import jakarta.tutorial.counter.ejb.CounterBean;
-import javax.ejb.EJB;
-import javax.enterprise.context.ConversationScoped;
-import javax.inject.Named;
 
 /**
  *

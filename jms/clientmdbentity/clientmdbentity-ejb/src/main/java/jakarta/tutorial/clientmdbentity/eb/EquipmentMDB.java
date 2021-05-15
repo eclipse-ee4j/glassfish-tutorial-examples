@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,23 +13,24 @@ package jakarta.tutorial.clientmdbentity.eb;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.ejb.MessageDrivenContext;
-import javax.inject.Inject;
-import javax.jms.Destination;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
-import javax.jms.MapMessage;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.ejb.MessageDrivenContext;
+import jakarta.inject.Inject;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
+import jakarta.jms.MapMessage;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 /**
  * The EquipmentMDB class is a message-driven bean. It implements the
- * javax.jms.MessageListener interface. It is defined as public (but not final
+ * jakarta.jms.MessageListener interface. It is defined as public (but not final
  * or abstract).
  */
 /* At present, must use mappedName if destination is defined elsewhere than
@@ -37,7 +38,7 @@ import javax.persistence.PersistenceContext;
  */
 @MessageDriven(mappedName="java:app/jms/HRTopic", activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationType",
-            propertyValue = "javax.jms.Topic"),
+            propertyValue = "jakarta.jms.Topic"),
     @ActivationConfigProperty(propertyName = "subscriptionDurability",
             propertyValue = "Durable"),
     @ActivationConfigProperty(propertyName = "clientId",
@@ -64,7 +65,7 @@ public class EquipmentMDB implements MessageListener {
 
     /**
      * onMessage method, declared as public (but not final or static), with a
-     * return type of void, and with one argument of type javax.jms.Message.
+     * return type of void, and with one argument of type jakarta.jms.Message.
      *
      * Casts the incoming Message to a MapMessage, retrieves its contents, and
      * assigns equipment appropriate to the new hire's position. Calls the

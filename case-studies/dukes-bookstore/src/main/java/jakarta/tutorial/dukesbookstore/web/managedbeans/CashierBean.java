@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,14 +12,15 @@ package jakarta.tutorial.dukesbookstore.web.managedbeans;
 
 import java.util.Calendar;
 import java.util.Date;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.component.UIOutput;
+import jakarta.faces.component.UISelectBoolean;
+import jakarta.faces.model.SelectItem;
+import jakarta.inject.Named;
 import jakarta.tutorial.dukesbookstore.ejb.BookRequestBean;
 import jakarta.tutorial.dukesbookstore.exception.OrderException;
-import javax.ejb.EJB;
-import javax.enterprise.context.RequestScoped;
-import javax.faces.component.UIOutput;
-import javax.faces.component.UISelectBoolean;
-import javax.faces.model.SelectItem;
-import javax.inject.Named;
 
 /**
  * <p>Backing bean for the <code>/bookcashier.xhtml</code> and

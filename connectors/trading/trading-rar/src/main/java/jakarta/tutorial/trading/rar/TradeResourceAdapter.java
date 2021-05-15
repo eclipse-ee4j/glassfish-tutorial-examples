@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2021 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,19 +11,22 @@
 package jakarta.tutorial.trading.rar;
 
 import java.util.logging.Logger;
-import javax.resource.ResourceException;
-import javax.resource.spi.ActivationSpec;
-import javax.resource.spi.BootstrapContext;
-import javax.resource.spi.Connector;
-import javax.resource.spi.ResourceAdapter;
-import javax.resource.spi.ResourceAdapterInternalException;
-import javax.resource.spi.endpoint.MessageEndpointFactory;
+
 import javax.transaction.xa.XAResource;
+
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.ActivationSpec;
+import jakarta.resource.spi.BootstrapContext;
+import jakarta.resource.spi.Connector;
+import jakarta.resource.spi.ResourceAdapter;
+import jakarta.resource.spi.ResourceAdapterInternalException;
+import jakarta.resource.spi.TransactionSupport.TransactionSupportLevel;
+import jakarta.resource.spi.endpoint.MessageEndpointFactory;
 
 @Connector(
         displayName = "TradeResourceAdapter",
         vendorName = "Jakarta EE Tutorial", 
-        version = "8.1"
+        version = "9.0"
 )
 public class TradeResourceAdapter implements ResourceAdapter {
    

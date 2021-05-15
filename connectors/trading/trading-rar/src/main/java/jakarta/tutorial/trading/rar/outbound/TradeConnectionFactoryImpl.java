@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,10 +11,11 @@
 package jakarta.tutorial.trading.rar.outbound;
 
 import java.util.logging.Logger;
+
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.ConnectionManager;
 import jakarta.tutorial.trading.rar.api.TradeConnection;
 import jakarta.tutorial.trading.rar.api.TradeConnectionFactory;
-import javax.resource.ResourceException;
-import javax.resource.spi.ConnectionManager;
 
 /* Implements the class that applications use to request connection 
  * handles to the EIS */

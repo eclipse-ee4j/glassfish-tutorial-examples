@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,17 +12,18 @@ package jakarta.tutorial.trading.war;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
+
+import jakarta.annotation.Resource;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
+import jakarta.resource.ConnectionFactoryDefinition;
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.TransactionSupport;
 import jakarta.tutorial.trading.rar.api.TradeConnection;
 import jakarta.tutorial.trading.rar.api.TradeConnectionFactory;
 import jakarta.tutorial.trading.rar.api.TradeOrder;
 import jakarta.tutorial.trading.rar.api.TradeProcessingException;
 import jakarta.tutorial.trading.rar.api.TradeResponse;
-import javax.annotation.Resource;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
-import javax.resource.ConnectionFactoryDefinition;
-import javax.resource.ResourceException;
-import javax.resource.spi.TransactionSupport;
 
 /* Managed bean for JSF pages that uses the RA Common Client Interface (CCI)
  * to submit trades to the EIS. */

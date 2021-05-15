@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,19 +12,20 @@ package jakarta.tutorial.clientsessionmdb.mdb;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.ejb.MessageDrivenContext;
-import javax.jms.JMSDestinationDefinition;
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.ejb.MessageDrivenContext;
+import jakarta.jms.JMSDestinationDefinition;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.TextMessage;
 
 /**
  * The MessageBean class is a message-driven bean. It implements the
- * javax.jms.MessageListener interface. It is defined as public (but not final
+ * jakarta.jms.MessageListener interface. It is defined as public (but not final
  * or abstract).
  */
 /* At present, must define destination in MDB in order to use destinationLookup;
@@ -33,13 +34,13 @@ import javax.jms.TextMessage;
  */
 @JMSDestinationDefinition(
         name = "java:module/jms/newsTopic",
-        interfaceName = "javax.jms.Topic",
+        interfaceName = "jakarta.jms.Topic",
         destinationName = "PhysicalNewsTopic")
 @MessageDriven(activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationLookup",
             propertyValue = "java:module/jms/newsTopic"),
     @ActivationConfigProperty(propertyName = "destinationType",
-            propertyValue = "javax.jms.Topic"),
+            propertyValue = "jakarta.jms.Topic"),
     @ActivationConfigProperty(propertyName = "messageSelector",
             propertyValue = "NewsType = 'Sports' OR NewsType = 'Opinion'"),
     @ActivationConfigProperty(propertyName = "subscriptionDurability",
@@ -60,7 +61,7 @@ public class MessageBean implements MessageListener {
 
     /**
      * onMessage method, declared as public (but not final or static), with a
-     * return type of void, and with one argument of type javax.jms.Message.
+     * return type of void, and with one argument of type jakarta.jms.Message.
      *
      * Casts the incoming Message to a TextMessage and displays the text.
      *

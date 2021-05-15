@@ -11,26 +11,30 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial</groupId>
+    <artifactId>archetypes</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
   <artifactId>jaxrs-service-archetype</artifactId>
   <packaging>maven-archetype</packaging>
-
   <name>jaxrs-service-archetype</name>
 
-  <parent>
-      <groupId>jakarta.tutorial</groupId>
-      <artifactId>archetypes</artifactId>
-      <version>8.1</version>
-  </parent>
-  
+  <properties>
+    <maven.archetype.plugin.version>3.2.0</maven.archetype.plugin.version>
+  </properties>
+
   <build>
     <extensions>
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
         <artifactId>archetype-packaging</artifactId>
-        <version>2.2</version>
+        <version>${maven.archetype.plugin.version}</version>
       </extension>
     </extensions>
 
@@ -38,10 +42,9 @@
       <plugins>
         <plugin>
           <artifactId>maven-archetype-plugin</artifactId>
-          <version>2.2</version>
+          <version>${maven.archetype.plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
   </build>
-
 </project>

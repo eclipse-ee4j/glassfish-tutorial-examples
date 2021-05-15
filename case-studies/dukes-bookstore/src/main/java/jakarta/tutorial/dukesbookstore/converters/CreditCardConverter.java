@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,12 +12,13 @@ package jakarta.tutorial.dukesbookstore.converters;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.faces.application.FacesMessage;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.convert.ConverterException;
-import javax.faces.convert.FacesConverter;
+
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.convert.ConverterException;
+import jakarta.faces.convert.FacesConverter;
 
 /**
  * <p>The CreditCardConverter class accepts a credit card number of type String
@@ -28,7 +29,7 @@ import javax.faces.convert.FacesConverter;
  * part of a CreditCardNumber.</p>
  */
 @FacesConverter("ccno")
-public class CreditCardConverter implements Converter {
+public class CreditCardConverter implements Converter<String> {
 
     /*
      * <p>The message identifier of the Message to be created if the conversion
@@ -49,7 +50,7 @@ public class CreditCardConverter implements Converter {
      * <code>"-"</code> characters from it.</p>
      */
     @Override
-    public Object getAsObject(FacesContext context,
+    public String getAsObject(FacesContext context,
             UIComponent component, String newValue)
             throws ConverterException {
 
@@ -89,7 +90,7 @@ public class CreditCardConverter implements Converter {
      */
     @Override
     public String getAsString(FacesContext context,
-            UIComponent component, Object value)
+            UIComponent component, String value)
             throws ConverterException {
 
         String inputVal = null;

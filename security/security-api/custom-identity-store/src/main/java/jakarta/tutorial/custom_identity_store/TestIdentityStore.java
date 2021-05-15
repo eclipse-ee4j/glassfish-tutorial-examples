@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2017, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,15 +11,13 @@
 package jakarta.tutorial.custom_identity_store;
 
 import static java.util.Arrays.asList;
-import static javax.security.enterprise.identitystore.CredentialValidationResult.INVALID_RESULT;
 
 import java.util.HashSet;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.security.enterprise.credential.UsernamePasswordCredential;
-import javax.security.enterprise.identitystore.CredentialValidationResult;
-import javax.security.enterprise.identitystore.IdentityStore;
-import javax.security.enterprise.credential.UsernamePasswordCredential;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.security.enterprise.credential.UsernamePasswordCredential;
+import jakarta.security.enterprise.identitystore.CredentialValidationResult;
+import jakarta.security.enterprise.identitystore.IdentityStore;
 
 @ApplicationScoped
 public class TestIdentityStore implements IdentityStore {
@@ -37,7 +35,7 @@ public class TestIdentityStore implements IdentityStore {
             return new CredentialValidationResult("Joe", new HashSet<>(asList("foo", "bar")));
         }
 
-        return INVALID_RESULT;
+        return CredentialValidationResult.INVALID_RESULT;
     }
 
 }

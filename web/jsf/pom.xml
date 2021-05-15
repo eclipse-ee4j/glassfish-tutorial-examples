@@ -11,30 +11,33 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>web</artifactId>
-        <version>8.1</version>
-    </parent>
-   
-    <artifactId>jsf</artifactId>
-    <packaging>pom</packaging>
- 
-    <name>jsf</name>
-  
-    <modules>
-        <module>ajaxguessnumber</module>
-        <module>bookmarks</module>
-        <module>checkout-module</module>
-        <module>guessnumber-jsf</module>
-        <module>hello1</module>
-        <module>hello1-rlc</module>
-        <module>reservation</module>
-        <module>simple-flow</module>
-        <module>compositecomponentexample</module>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>jakarta.tutorial.web</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>jakarta.tutorial.web.jsf</groupId>
+  <artifactId>parent</artifactId>
+  <packaging>pom</packaging>
+
+  <name>jsf</name>
+
+  <modules>
+    <module>ajaxguessnumber</module>
+    <module>bookmarks</module>
+    <module>checkout-module</module>
+    <module>guessnumber-jsf</module>
+    <module>hello1</module>
+    <module>hello1-rlc</module>
+    <module>reservation</module>
+    <module>simple-flow</module>
+    <module>compositecomponentexample</module>
   </modules>
-    
+
 </project>

@@ -13,15 +13,16 @@ package jakarta.tutorial.order.entity;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import static javax.persistence.CascadeType.ALL;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import static javax.persistence.TemporalType.TIMESTAMP;
-import javax.persistence.Transient;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name="PERSISTENCE_ORDER_CUSTOMERORDER")
@@ -71,7 +72,7 @@ public class CustomerOrder implements java.io.Serializable {
         this.status = status;
     }
     
-    @Temporal(TIMESTAMP)
+    @Temporal(TemporalType.TIMESTAMP)
     public Date getLastUpdate() {
         return lastUpdate;
     }
@@ -96,7 +97,7 @@ public class CustomerOrder implements java.io.Serializable {
         this.shipmentInfo = shipmentInfo;
     }
     
-    @OneToMany(cascade=ALL, mappedBy="customerOrder")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="customerOrder")
     public Collection<LineItem> getLineItems() {
         return lineItems;
     }

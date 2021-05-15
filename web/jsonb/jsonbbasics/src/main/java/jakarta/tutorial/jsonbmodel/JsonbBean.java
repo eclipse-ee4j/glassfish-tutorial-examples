@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2017, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,16 +10,16 @@
 
 package jakarta.tutorial.jsonbmodel;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
+import jakarta.json.bind.Jsonb;
+import jakarta.json.bind.JsonbBuilder;
+import jakarta.json.bind.JsonbConfig;
 import jakarta.tutorial.jsonbmodel.person.Person;
 import jakarta.tutorial.jsonbmodel.person.PhoneNumber;
-
-import java.io.*;
-import java.util.*;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
 
 /**
  * This class manages the data from a JSF form, creates Object and serialize this object to JSON.

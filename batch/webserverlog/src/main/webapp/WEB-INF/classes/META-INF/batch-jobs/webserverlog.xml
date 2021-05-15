@@ -11,8 +11,8 @@
 
 -->
 
-<job id="webserverlog" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-     version="1.0">
+<job id="webserverlog" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+     version="2.0">
     <properties>
         <property name="log_file_name" value="log1.txt"/>
         <property name="filtered_file_name" value="filtered1.txt"/>

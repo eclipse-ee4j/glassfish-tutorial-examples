@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,11 +13,12 @@ package jakarta.tutorial.roster.client;
 
 import java.util.Iterator;
 import java.util.List;
+
+import jakarta.ejb.EJB;
 import jakarta.tutorial.roster.request.Request;
 import jakarta.tutorial.roster.util.LeagueDetails;
 import jakarta.tutorial.roster.util.PlayerDetails;
 import jakarta.tutorial.roster.util.TeamDetails;
-import javax.ejb.EJB;
 
 public class RosterClient {
     @EJB

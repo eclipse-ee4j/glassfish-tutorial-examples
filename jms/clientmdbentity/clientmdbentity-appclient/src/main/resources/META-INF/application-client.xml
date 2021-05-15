@@ -11,9 +11,9 @@
 
 -->
 
-<application-client version="7"
-                    xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+<application-client version="9"
+                    xmlns="https://jakarta.ee/xml/ns/jakartaee" 
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-                    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application-client_7.xsd">
+                    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd">
     <display-name>clientmdbentity-appclient</display-name>
 </application-client>

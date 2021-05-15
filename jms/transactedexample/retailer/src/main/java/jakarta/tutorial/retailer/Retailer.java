@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,13 +10,13 @@
 
 package jakarta.tutorial.retailer;
 
-import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSConsumer;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
-import javax.jms.MapMessage;
-import javax.jms.Queue;
+import jakarta.annotation.Resource;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.JMSConsumer;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
+import jakarta.jms.MapMessage;
+import jakarta.jms.Queue;
 
 /**
  * The Retailer class orders a number of computers by sending a message to a
@@ -47,7 +47,7 @@ public class Retailer {
             System.exit(1);
         }
 
-        quantity = (new Integer(args[0])).intValue();
+        quantity = Integer.parseInt(args[0]);
         System.out.println("Retailer: Quantity to be ordered is " + quantity);
         /*
          * Create non-transacted context and sender for

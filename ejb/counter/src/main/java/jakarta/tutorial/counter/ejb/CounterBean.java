@@ -10,7 +10,7 @@
 
 package jakarta.tutorial.counter.ejb;
 
-import javax.ejb.Singleton;
+import jakarta.ejb.Singleton;
 
 /**
  *

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -15,13 +15,14 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Logger;
+
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.event.Event;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.tutorial.billpayment.event.PaymentEvent;
 import jakarta.tutorial.billpayment.interceptor.Logged;
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.event.Event;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.validation.constraints.Digits;
+import jakarta.validation.constraints.Digits;
 
 /**
  * Bean that fires DEBIT and CREDIT payment events based on UI selection.

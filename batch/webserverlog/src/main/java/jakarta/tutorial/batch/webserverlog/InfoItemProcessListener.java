@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,10 +12,11 @@ package jakarta.tutorial.batch.webserverlog;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import jakarta.batch.api.chunk.listener.ItemProcessListener;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Named;
 import jakarta.tutorial.batch.webserverlog.items.LogLine;
-import javax.batch.api.chunk.listener.ItemProcessListener;
-import javax.enterprise.context.Dependent;
-import javax.inject.Named;
 
 @Dependent
 @Named("InfoItemProcessListener")

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -16,23 +16,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSDestinationDefinition;
+import jakarta.jms.Topic;
+import jakarta.json.Json;
+import jakarta.json.stream.JsonGenerator;
+import jakarta.json.stream.JsonParser;
 import jakarta.tutorial.traffic.rar.api.TrafficCommand;
 import jakarta.tutorial.traffic.rar.api.TrafficListener;
-import javax.annotation.Resource;
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.inject.Inject;
-import javax.jms.JMSContext;
-import javax.jms.JMSDestinationDefinition;
-import javax.jms.Topic;
-import javax.json.Json;
-import javax.json.stream.JsonGenerator;
-import javax.json.stream.JsonParser;
 
 /* Create a JMS destination to send filtered traffic messages */
 @JMSDestinationDefinition(
     name = "java:app/traffic-ejb/traffictopic",
-    interfaceName = "javax.jms.Topic",
+    interfaceName = "jakarta.jms.Topic",
     destinationName = "CityTopic"
 )
 /* Activate the traffic-rar resource adapter from this MDB */

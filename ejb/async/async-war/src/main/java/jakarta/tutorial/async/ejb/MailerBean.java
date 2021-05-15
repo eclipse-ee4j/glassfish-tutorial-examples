@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -20,17 +20,18 @@ import java.util.Properties;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.ejb.AsyncResult;
-import javax.ejb.Asynchronous;
-import javax.ejb.Stateless;
-import javax.inject.Named;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.AsyncResult;
+import jakarta.ejb.Asynchronous;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Named;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.Session;
+import jakarta.mail.Transport;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeMessage;
 
 /**
  *
@@ -58,12 +59,12 @@ public class MailerBean {
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(email, false));
             message.setSubject("Test message from async example");
-            message.setHeader("X-Mailer", "JavaMail");
+            message.setHeader("X-Mailer", "Jakarta Mail");
             DateFormat dateFormatter = DateFormat
                     .getDateTimeInstance(DateFormat.LONG, DateFormat.SHORT);
             Date timeStamp = new Date();
             String messageBody = "This is a test message from the async "
-                    + "example of the Java EE Tutorial. It was sent on "
+                    + "example of the Jakarta EE Tutorial. It was sent on "
                     + dateFormatter.format(timeStamp)
                     + ".";
             message.setText(messageBody);

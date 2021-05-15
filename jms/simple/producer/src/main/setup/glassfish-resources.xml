@@ -13,11 +13,11 @@
 -->
 
 <resources>
-  <admin-object-resource enabled="true" jndi-name="jms/MyQueue" object-type="user" res-adapter="jmsra" res-type="javax.jms.Queue">
+  <admin-object-resource enabled="true" jndi-name="jms/MyQueue" object-type="user" res-adapter="jmsra" res-type="jakarta.jms.Queue">
     <description/>
     <property name="Name" value="PhysicalQueue"/>
   </admin-object-resource>
-  <admin-object-resource enabled="true" jndi-name="jms/MyTopic" object-type="user" res-adapter="jmsra" res-type="javax.jms.Topic">
+  <admin-object-resource enabled="true" jndi-name="jms/MyTopic" object-type="user" res-adapter="jmsra" res-type="jakarta.jms.Topic">
     <description/>
     <property name="Name" value="PhysicalTopic"/>
   </admin-object-resource>

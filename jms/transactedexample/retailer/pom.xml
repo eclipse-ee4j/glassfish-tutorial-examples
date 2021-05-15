@@ -11,36 +11,37 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <artifactId>transactedexample</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>8.1</version>
-    </parent>
-    
-    <artifactId>retailer</artifactId>
-    <packaging>app-client</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <name>retailer</name>
+  <parent>
+    <groupId>jakarta.tutorial.jms.transactedexample</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <archive>
-                        <manifest>                            
-                            <mainClass>jakarta.tutorial.retailer.Retailer</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <artifactId>retailer</artifactId>
+  <packaging>app-client</packaging>
+
+  <name>retailer</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-acr-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>jakarta.tutorial.retailer.Retailer</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

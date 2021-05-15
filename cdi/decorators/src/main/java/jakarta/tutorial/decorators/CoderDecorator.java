@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,10 +10,10 @@
 
 package jakarta.tutorial.decorators;
 
-import javax.decorator.Decorator;
-import javax.decorator.Delegate;
-import javax.enterprise.inject.Any;
-import javax.inject.Inject;
+import jakarta.decorator.Decorator;
+import jakarta.decorator.Delegate;
+import jakarta.enterprise.inject.Any;
+import jakarta.inject.Inject;
 
 @Decorator
 public abstract class CoderDecorator implements Coder {

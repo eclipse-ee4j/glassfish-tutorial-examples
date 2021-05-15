@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,22 +10,30 @@
 
 package com.forest.ejb;
 
-import com.forest.entity.*;
-import com.forest.events.OrderEvent;
-import com.forest.qualifiers.LoggedIn;
-import com.forest.web.util.JsfUtil;
-import com.forest.web.util.PageNavigation;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.EJB;
-import javax.enterprise.context.Conversation;
-import javax.enterprise.context.ConversationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
+
+import com.forest.entity.CustomerOrder;
+import com.forest.entity.Groups;
+import com.forest.entity.OrderDetail;
+import com.forest.entity.OrderDetailPK;
+import com.forest.entity.OrderStatus;
+import com.forest.entity.Person;
+import com.forest.entity.Product;
+import com.forest.events.OrderEvent;
+import com.forest.qualifiers.LoggedIn;
+import com.forest.web.util.JsfUtil;
+import com.forest.web.util.PageNavigation;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.Conversation;
+import jakarta.enterprise.context.ConversationScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 @Named(value = "shoppingCart")
 @ConversationScoped

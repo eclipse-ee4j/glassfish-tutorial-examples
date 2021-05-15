@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,13 +10,17 @@
 
 package jakarta.tutorial.standalone.ejb;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.logging.Logger;
-import javax.ejb.embeddable.EJBContainer;
+
 import javax.naming.Context;
+
 import org.junit.After;
-import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+import jakarta.ejb.embeddable.EJBContainer;
 
 /**
  *

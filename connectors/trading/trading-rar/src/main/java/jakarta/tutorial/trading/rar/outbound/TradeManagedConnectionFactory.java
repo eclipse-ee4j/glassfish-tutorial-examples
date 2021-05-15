@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -18,19 +18,20 @@ import java.util.logging.Logger;
 
 import javax.naming.NamingException;
 import javax.naming.Reference;
-import javax.resource.Referenceable;
-import javax.resource.ResourceException;
-import javax.resource.cci.Connection;
-import javax.resource.cci.ConnectionFactory;
-import javax.resource.spi.ConfigProperty;
-import javax.resource.spi.ConnectionDefinition;
-import javax.resource.spi.ConnectionManager;
-import javax.resource.spi.ConnectionRequestInfo;
-import javax.resource.spi.ManagedConnection;
-import javax.resource.spi.ManagedConnectionFactory;
-import javax.resource.spi.ResourceAdapter;
-import javax.resource.spi.ResourceAdapterAssociation;
 import javax.security.auth.Subject;
+
+import jakarta.resource.Referenceable;
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.ConfigProperty;
+import jakarta.resource.spi.ConnectionDefinition;
+import jakarta.resource.spi.ConnectionManager;
+import jakarta.resource.spi.ConnectionRequestInfo;
+import jakarta.resource.spi.ManagedConnection;
+import jakarta.resource.spi.ManagedConnectionFactory;
+import jakarta.resource.spi.ResourceAdapter;
+import jakarta.resource.spi.ResourceAdapterAssociation;
+import jakarta.tutorial.trading.rar.api.TradeConnection;
+import jakarta.tutorial.trading.rar.api.TradeConnectionFactory;
 
 
 /* The container's connection manager uses this class to create a pool
@@ -38,9 +39,9 @@ import javax.security.auth.Subject;
 
 /* Define classes an interfaces for the EIS physical connection */
 @ConnectionDefinition(
-    connectionFactory = ConnectionFactory.class,
+    connectionFactory = TradeConnectionFactory.class,
     connectionFactoryImpl = TradeConnectionFactoryImpl.class,
-    connection = Connection.class,
+    connection = TradeConnection.class,
     connectionImpl = TradeConnectionImpl.class
 )
 public class TradeManagedConnectionFactory implements ManagedConnectionFactory,

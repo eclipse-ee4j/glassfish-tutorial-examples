@@ -10,23 +10,25 @@
 
 package com.forest.ejb;
 
-import com.forest.entity.CustomerOrder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.jms.JMSConsumer;
-import javax.jms.JMSContext;
-import javax.jms.JMSDestinationDefinition;
-import javax.jms.JMSException;
-import javax.jms.ObjectMessage;
-import javax.jms.Queue;
-import javax.jms.QueueBrowser;
+
+import com.forest.entity.CustomerOrder;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSConsumer;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSDestinationDefinition;
+import jakarta.jms.JMSException;
+import jakarta.jms.ObjectMessage;
+import jakarta.jms.Queue;
+import jakarta.jms.QueueBrowser;
 
 @JMSDestinationDefinition(
         name = "java:global/jms/OrderQueue",
-        interfaceName = "javax.jms.Queue",
+        interfaceName = "jakarta.jms.Queue",
         destinationName = "PhysicalOrderQueue")
 @Stateless
 public class OrderJMSManager {

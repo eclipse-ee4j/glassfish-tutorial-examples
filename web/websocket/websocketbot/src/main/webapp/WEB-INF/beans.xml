@@ -11,9 +11,9 @@
 
 -->
 
-<beans version="1.2"
-       xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<beans version="3.0"
+       xmlns="https://jakarta.ee/xml/ns/jakartaee"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_2.xsd"
+       xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd"
        bean-discovery-mode="all">
 </beans>

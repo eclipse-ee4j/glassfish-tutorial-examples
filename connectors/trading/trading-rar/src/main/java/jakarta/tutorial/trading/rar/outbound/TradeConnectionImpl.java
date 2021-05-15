@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,11 +12,12 @@ package jakarta.tutorial.trading.rar.outbound;
 
 import java.io.IOException;
 import java.util.logging.Logger;
+
+import jakarta.resource.ResourceException;
 import jakarta.tutorial.trading.rar.api.TradeConnection;
 import jakarta.tutorial.trading.rar.api.TradeOrder;
 import jakarta.tutorial.trading.rar.api.TradeProcessingException;
 import jakarta.tutorial.trading.rar.api.TradeResponse;
-import javax.resource.ResourceException;
 
 /* An application-level connection handle used by clients to access
  * the physical connection. The physical connection is represented by

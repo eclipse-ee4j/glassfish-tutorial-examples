@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,14 +10,14 @@
 
 package jakarta.tutorial.dukestutoring.web;
 
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.tutorial.dukestutoring.ejb.AdminBean;
-import jakarta.tutorial.dukestutoring.entity.Address;
-import jakarta.tutorial.dukestutoring.entity.Student;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotNull;
+import jakartaee.tutorial.dukestutoring.entity.Address;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 @Named
 @RequestScoped

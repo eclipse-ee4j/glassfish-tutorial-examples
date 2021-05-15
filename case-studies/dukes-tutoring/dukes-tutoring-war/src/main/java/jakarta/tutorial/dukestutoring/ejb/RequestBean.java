@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -21,37 +21,38 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Guardian_;
-import jakarta.tutorial.dukestutoring.entity.StatusEntry;
-import jakarta.tutorial.dukestutoring.entity.StatusEntry_;
-import jakarta.tutorial.dukestutoring.entity.Student;
-import jakarta.tutorial.dukestutoring.entity.Student_;
-import jakarta.tutorial.dukestutoring.entity.TutoringSession;
-import jakarta.tutorial.dukestutoring.entity.TutoringSession_;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.SessionContext;
+import jakarta.ejb.Stateless;
+import jakarta.enterprise.event.Event;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Join;
+import jakarta.persistence.criteria.Root;
 import jakarta.tutorial.dukestutoring.events.StatusEvent;
 import jakarta.tutorial.dukestutoring.util.CalendarUtil;
 import jakarta.tutorial.dukestutoring.util.StatusType;
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import javax.annotation.security.RolesAllowed;
-import javax.ejb.SessionContext;
-import javax.ejb.Stateless;
-import javax.enterprise.event.Event;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.Root;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Guardian_;
+import jakartaee.tutorial.dukestutoring.entity.StatusEntry;
+import jakartaee.tutorial.dukestutoring.entity.StatusEntry_;
+import jakartaee.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Student_;
+import jakartaee.tutorial.dukestutoring.entity.TutoringSession;
+import jakartaee.tutorial.dukestutoring.entity.TutoringSession_;
 
 /**
  *

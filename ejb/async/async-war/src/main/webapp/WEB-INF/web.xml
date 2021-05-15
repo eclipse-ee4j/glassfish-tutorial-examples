@@ -11,14 +11,12 @@
 
 -->
 
-<web-app version="3.1"
-         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+<web-app version="5.0"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
 
-    <display-name>mojarra-regression-test</display-name>
-    <description>A simple regression test to make it easier to get your bug fixed. The only reason we need a web.xml is to set the PROJECT_STAGE to Develoment.  If you have a web.xml, then you need to map the FacesServlet.</description>
-
+    <display-name>async-war</display-name>
     <context-param>
         <description>
             Tell the runtime where we are in the project development
@@ -27,14 +25,14 @@
             The runtime will display helpful hints to correct common mistakes
             when the value is Development.
         </description>
-        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-name>jakarta.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
 
     <!-- Faces Servlet -->
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
-    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -14,12 +14,13 @@ package jakarta.tutorial.cartsecure.ejb;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.Remove;
+import jakarta.ejb.Stateful;
 import jakarta.tutorial.cartsecure.util.BookException;
 import jakarta.tutorial.cartsecure.util.IdVerifier;
-import javax.ejb.Remove;
-import javax.ejb.Stateful;
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
 
 @Stateful
 @DeclareRoles("TutorialUser")

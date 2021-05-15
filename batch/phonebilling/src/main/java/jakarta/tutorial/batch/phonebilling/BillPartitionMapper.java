@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,14 +11,15 @@
 package jakarta.tutorial.batch.phonebilling;
 
 import java.util.Properties;
-import javax.batch.api.partition.PartitionMapper;
-import javax.batch.api.partition.PartitionPlan;
-import javax.batch.api.partition.PartitionPlanImpl;
-import javax.enterprise.context.Dependent;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+
+import jakarta.batch.api.partition.PartitionMapper;
+import jakarta.batch.api.partition.PartitionPlan;
+import jakarta.batch.api.partition.PartitionPlanImpl;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Named;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 /* Partition mapper artifact.
  * Determines the number of partitions (2) for the bill processing step

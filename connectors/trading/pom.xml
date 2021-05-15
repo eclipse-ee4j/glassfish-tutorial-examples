@@ -11,23 +11,36 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>trading</artifactId>
-    <packaging>pom</packaging>
-    <name>trading</name>
-	
-    <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>connectors</artifactId>
-        <version>8.1</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial.connectors</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
+  <groupId>jakarta.tutorial.connectors.trading</groupId>
+  <artifactId>parent</artifactId>
+  <packaging>pom</packaging>
+  <name>trading</name>
 
-    <modules>
-        <module>trading-ear</module>
-        <module>trading-eis</module>
-        <module>trading-rar</module>
-        <module>trading-war</module>
-    </modules>
+  <modules>
+    <module>trading-ear</module>
+    <module>trading-eis</module>
+    <module>trading-rar</module>
+    <module>trading-war</module>
+  </modules>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

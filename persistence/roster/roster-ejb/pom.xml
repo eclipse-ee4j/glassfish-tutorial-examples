@@ -11,86 +11,51 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>roster</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>8.1</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial.persistence.roster</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>roster-ejb</artifactId>
-    <packaging>ejb</packaging>
+  <artifactId>roster-ejb</artifactId>
+  <packaging>ejb</packaging>
 
-    <name>roster-ejb</name>
+  <name>roster-ejb</name>
 
-   
-    <repositories>
-        <!--repository>
-            <id>EclipseLink</id>
-            <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
-        </repository-->
-    </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>roster-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 
-    <properties>
-        <eclipselink.version>2.5.0</eclipselink.version>
-        <maven.processor.plugin.version>2.2.1</maven.processor.plugin.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>${eclipselink.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>roster-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerArgument>-proc:none</compilerArgument>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>${maven.processor.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <options>
-                                <eclipselink.persistencexml>${basedir}/src/main/resources/META-INF/persistence.xml</eclipselink.persistencexml>
-                            </options>
-                            <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-                            <outputDirectory>${project.build.directory}/generated-sources/metamodel</outputDirectory>
-                            <processors>
-                                <processor>org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor</processor>
-                            </processors>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.eclipse.persistence</groupId>
+              <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+              <version>${eclipselink.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

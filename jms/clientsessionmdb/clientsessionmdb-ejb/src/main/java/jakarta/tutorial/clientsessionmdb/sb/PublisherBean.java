@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,15 +13,16 @@ package jakarta.tutorial.clientsessionmdb.sb;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.ejb.Remote;
-import javax.ejb.SessionContext;
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
-import javax.jms.TextMessage;
-import javax.jms.Topic;
+
+import jakarta.annotation.Resource;
+import jakarta.ejb.Remote;
+import jakarta.ejb.SessionContext;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
+import jakarta.jms.TextMessage;
+import jakarta.jms.Topic;
 
 /**
  * Bean class for Publisher enterprise bean. Defines publishNews business method

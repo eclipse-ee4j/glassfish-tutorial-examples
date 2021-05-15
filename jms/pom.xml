@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2018, 2019 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -17,10 +17,10 @@
     <parent>
         <groupId>jakarta.tutorial</groupId>
         <artifactId>examples</artifactId>
-        <version>8.1</version>
+        <version>9.0-SNAPSHOT</version>
     </parent>
- 
-    <artifactId>jms</artifactId>
+	<groupId>jakarta.tutorial.jms</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
    
     <name>jms</name>
@@ -35,8 +35,5 @@
         <module>websimplemessage</module>
         <module>transactedexample</module>
     </modules>
-    
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
+
 </project>

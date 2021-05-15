@@ -11,122 +11,19 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial.concurrency</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>jobs</artifactId>
-    <packaging>war</packaging>
+  <artifactId>jobs</artifactId>
+  <packaging>war</packaging>
 
-    <name>jobs</name>
+  <name>jobs</name>
 
-    <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>concurrency</artifactId>
-        <version>8.1</version>
-    </parent>
-    
-    <build>
-        <plugins>
-        <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>${maven.exec.plugin.version}</version>
-                <executions>
-                    <!-- Delete existing resources -->
-                    <execution>
-                        <id>delete-executorservice-high</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                            <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
-                            <arguments>
-                                <argument>delete-managed-executor-service</argument>
-                                <argument>MES_High</argument>
-                            </arguments>
-                            <successCodes>
-                                <successCode>0</successCode>
-                                <successCode>1</successCode>
-                            </successCodes>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>delete-executorservice-low</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                            <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
-                            <arguments>
-                                <argument>delete-managed-executor-service</argument>
-                                <argument>MES_Low</argument>
-                            </arguments>
-                            <successCodes>
-                                <successCode>0</successCode>
-                                <successCode>1</successCode>
-                            </successCodes>
-                        </configuration>
-                    </execution>
-                
-                    <!-- Create resources again -->
-                    <execution>
-                        <id>create-executorservice-high</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                            <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
-                            <arguments>
-                                <argument>create-managed-executor-service</argument>
-                                <argument>--corepoolsize</argument>
-                                <argument>2</argument>
-                                <argument>--threadpriority</argument>
-                                <argument>10</argument>
-                                <argument>--maximumpoolsize</argument>
-                                <argument>5</argument>
-                                <argument>--taskqueuecapacity</argument>
-                                <argument>2</argument>
-                                <argument>MES_High</argument>
-                            </arguments>
-                            <successCodes>
-                                <successCode>0</successCode>
-                            </successCodes>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>create-executorservice-low</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                            <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
-                            <arguments>
-                                <argument>create-managed-executor-service</argument>
-                                <argument>--corepoolsize</argument>
-                                <argument>1</argument>
-                                <argument>--threadpriority</argument>
-                                <argument>1</argument>
-                                <argument>--maximumpoolsize</argument>
-                                <argument>1</argument>
-                                <argument>--taskqueuecapacity</argument>
-                                <argument>0</argument>
-                                <argument>MES_Low</argument>
-                            </arguments>
-                            <successCodes>
-                                <successCode>0</successCode>
-                            </successCodes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

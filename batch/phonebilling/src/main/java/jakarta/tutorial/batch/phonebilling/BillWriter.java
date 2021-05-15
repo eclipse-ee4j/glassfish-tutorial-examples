@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -15,11 +15,12 @@ import java.io.FileWriter;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.List;
+
+import jakarta.batch.api.chunk.ItemWriter;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Named;
 import jakarta.tutorial.batch.phonebilling.items.CallRecord;
 import jakarta.tutorial.batch.phonebilling.items.PhoneBill;
-import javax.batch.api.chunk.ItemWriter;
-import javax.enterprise.context.Dependent;
-import javax.inject.Named;
 
 /* Writer artifact.
  * Write each bill to a text file.

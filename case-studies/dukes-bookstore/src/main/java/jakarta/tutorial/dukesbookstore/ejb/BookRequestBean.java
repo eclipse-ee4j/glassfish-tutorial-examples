@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -15,16 +15,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import jakarta.ejb.EJBException;
+import jakarta.ejb.Stateful;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.tutorial.dukesbookstore.entity.Book;
 import jakarta.tutorial.dukesbookstore.exception.BookNotFoundException;
 import jakarta.tutorial.dukesbookstore.exception.BooksNotFoundException;
 import jakarta.tutorial.dukesbookstore.exception.OrderException;
 import jakarta.tutorial.dukesbookstore.web.managedbeans.ShoppingCart;
 import jakarta.tutorial.dukesbookstore.web.managedbeans.ShoppingCartItem;
-import javax.ejb.EJBException;
-import javax.ejb.Stateful;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  * <p>Stateful session bean for the bookstore example.</p>

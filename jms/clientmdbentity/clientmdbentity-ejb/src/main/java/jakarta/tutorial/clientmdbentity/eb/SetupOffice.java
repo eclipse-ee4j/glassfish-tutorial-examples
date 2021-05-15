@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,8 +13,9 @@ package jakarta.tutorial.clientmdbentity.eb;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 /**
  * The SetupOffice class implements the business methods of the entity.

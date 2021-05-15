@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,12 +12,13 @@ package jakarta.tutorial.producerfields.web;
 
 import java.io.Serializable;
 import java.util.List;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.ConversationScoped;
+import jakarta.inject.Named;
 import jakarta.tutorial.producerfields.ejb.RequestBean;
 import jakarta.tutorial.producerfields.entity.ToDo;
-import javax.ejb.EJB;
-import javax.enterprise.context.ConversationScoped;
-import javax.inject.Named;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 @Named
 @ConversationScoped

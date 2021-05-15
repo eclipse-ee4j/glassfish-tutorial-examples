@@ -10,8 +10,8 @@
 
 package jakarta.tutorial.helloservice;
 
-import javax.jws.WebService;
-import javax.jws.WebMethod;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebService;
 
 @WebService
 public class Hello {

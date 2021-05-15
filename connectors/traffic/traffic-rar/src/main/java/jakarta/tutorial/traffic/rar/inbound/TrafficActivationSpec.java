@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -15,14 +15,15 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
+
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.Activation;
+import jakarta.resource.spi.ActivationSpec;
+import jakarta.resource.spi.ConfigProperty;
+import jakarta.resource.spi.InvalidPropertyException;
+import jakarta.resource.spi.ResourceAdapter;
 import jakarta.tutorial.traffic.rar.api.TrafficCommand;
 import jakarta.tutorial.traffic.rar.api.TrafficListener;
-import javax.resource.ResourceException;
-import javax.resource.spi.Activation;
-import javax.resource.spi.ActivationSpec;
-import javax.resource.spi.ConfigProperty;
-import javax.resource.spi.InvalidPropertyException;
-import javax.resource.spi.ResourceAdapter;
 
 /* The activation spec used by the MDB to configure the resource adapter */
 @Activation(

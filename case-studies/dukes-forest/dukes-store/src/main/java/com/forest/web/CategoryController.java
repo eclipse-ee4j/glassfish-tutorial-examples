@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,25 +10,27 @@
 
 package com.forest.web;
 
+import java.io.Serializable;
+import java.util.ResourceBundle;
+
 import com.forest.ejb.CategoryBean;
 import com.forest.entity.Category;
 import com.forest.web.util.AbstractPaginationHelper;
 import com.forest.web.util.JsfUtil;
 import com.forest.web.util.PageNavigation;
-import java.io.Serializable;
-import java.util.ResourceBundle;
-import javax.ejb.EJB;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.convert.FacesConverter;
-import javax.faces.model.DataModel;
-import javax.faces.model.ListDataModel;
-import javax.faces.model.SelectItem;
 
-@ManagedBean (name= "categoryController")
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.convert.FacesConverter;
+import jakarta.faces.model.DataModel;
+import jakarta.faces.model.ListDataModel;
+import jakarta.faces.model.SelectItem;
+import jakarta.inject.Named;
+
+@Named (value = "categoryController")
 @SessionScoped
 public class CategoryController implements Serializable {
     

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,14 +12,15 @@ package jakarta.tutorial.batch.phonebilling;
 
 import java.io.Serializable;
 import java.util.Iterator;
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.ItemReader;
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.ItemReader;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 
 /* Reader batch artifact.
  * Reads bills from the entity manager.

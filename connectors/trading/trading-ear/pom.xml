@@ -11,56 +11,62 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>trading-ear</artifactId>
-    <packaging>ear</packaging>
-    <name>trading-ear</name>
-	
-    <parent>
-        <artifactId>trading</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>8.1</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>jakarta.tutorial.connectors.trading</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.0-SNAPSHOT</version>
+  </parent>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ear-plugin</artifactId>
-                <version>${maven.ear.plugin.version}</version>
-                <configuration>
-                    <finalName>trading-ear</finalName>
-                    <defaultLibBundleDir>lib</defaultLibBundleDir>
-                    <modules>
-                        <webModule>
-                            <groupId>jakarta.tutorial</groupId>
-                            <artifactId>trading-war</artifactId>
-                            <bundleFileName>trading-war.war</bundleFileName>
-                        </webModule>
-                        <rarModule>
-                            <groupId>jakarta.tutorial</groupId>
-                            <artifactId>trading-rar</artifactId>
-                            <bundleFileName>trading-rar.rar</bundleFileName>
-                        </rarModule>
-                    </modules>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-  
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>trading-war</artifactId>
-            <version>${project.version}</version>
-            <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>trading-rar</artifactId>
-            <version>${project.version}</version>
-            <type>rar</type>
-        </dependency>
-    </dependencies>
+  <artifactId>trading-ear</artifactId>
+  <packaging>ear</packaging>
+  <name>trading-ear</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <skip>false</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ear-plugin</artifactId>
+        <configuration>
+          <finalName>trading-ear</finalName>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <modules>
+            <webModule>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>trading-war</artifactId>
+            </webModule>
+            <rarModule>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>trading-rar</artifactId>
+            </rarModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>trading-war</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>trading-rar</artifactId>
+      <version>${project.version}</version>
+      <type>rar</type>
+    </dependency>
+  </dependencies>
 </project>

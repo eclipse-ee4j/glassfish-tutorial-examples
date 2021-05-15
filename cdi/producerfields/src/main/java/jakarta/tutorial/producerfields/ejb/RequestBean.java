@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,13 +13,14 @@ package jakarta.tutorial.producerfields.ejb;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import jakarta.ejb.EJBException;
+import jakarta.ejb.Stateful;
+import jakarta.enterprise.context.ConversationScoped;
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
 import jakarta.tutorial.producerfields.db.UserDatabase;
 import jakarta.tutorial.producerfields.entity.ToDo;
-import javax.ejb.EJBException;
-import javax.ejb.Stateful;
-import javax.enterprise.context.ConversationScoped;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
 
 @ConversationScoped
 @Stateful

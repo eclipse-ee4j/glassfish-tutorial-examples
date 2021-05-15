@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,13 +11,14 @@
 package jakarta.tutorial.batch.webserverlog;
 
 import java.util.Properties;
-import javax.batch.api.chunk.ItemProcessor;
-import javax.batch.runtime.context.JobContext;
-import javax.inject.Inject;
-import jakarta.tutorial.batch.webserverlog.items.LogLine;
+
+import jakarta.batch.api.chunk.ItemProcessor;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import jakarta.tutorial.batch.webserverlog.items.LogFilteredLine;
-import javax.enterprise.context.Dependent;
-import javax.inject.Named;
+import jakarta.tutorial.batch.webserverlog.items.LogLine;
 
 /* Processes items from the log file
  * Filters only those items from mobile or tablet browsers,

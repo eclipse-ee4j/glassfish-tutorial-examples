@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -19,12 +19,13 @@ import java.lang.reflect.Method;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.json.Json;
-import javax.json.stream.JsonParser;
-import javax.json.stream.JsonParser.Event;
-import javax.resource.ResourceException;
-import javax.resource.spi.endpoint.MessageEndpoint;
-import javax.resource.spi.work.Work;
+
+import jakarta.json.Json;
+import jakarta.json.stream.JsonParser;
+import jakarta.json.stream.JsonParser.Event;
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.endpoint.MessageEndpoint;
+import jakarta.resource.spi.work.Work;
 
 /* The RA runs this class to connect to the traffic information system
  * EIS and invoke methods on TrafficMdb */

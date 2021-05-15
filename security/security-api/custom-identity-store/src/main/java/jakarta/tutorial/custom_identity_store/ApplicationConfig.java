@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2017, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,10 +10,9 @@
 
 package jakarta.tutorial.custom_identity_store;
 
-import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
-import javax.security.enterprise.identitystore.DatabaseIdentityStoreDefinition;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
+import jakarta.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
 
 @BasicAuthenticationMechanismDefinition(
         realmName = "file"

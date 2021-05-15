@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,10 +13,11 @@ package jakarta.tutorial.reservation;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import javax.enterprise.context.SessionScoped;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.AjaxBehaviorEvent;
-import javax.inject.Named;
+
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.event.AbortProcessingException;
+import jakarta.faces.event.AjaxBehaviorEvent;
+import jakarta.inject.Named;
 
 @Named
 @SessionScoped

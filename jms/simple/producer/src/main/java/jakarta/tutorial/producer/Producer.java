@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,13 +10,13 @@
 
 package jakarta.tutorial.producer;
 
-import javax.annotation.Resource;
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.JMSContext;
-import javax.jms.JMSRuntimeException;
-import javax.jms.Queue;
-import javax.jms.Topic;
+import jakarta.annotation.Resource;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSRuntimeException;
+import jakarta.jms.Queue;
+import jakarta.jms.Topic;
 
 /**
  * The Producer class consists only of a main method, which sends several

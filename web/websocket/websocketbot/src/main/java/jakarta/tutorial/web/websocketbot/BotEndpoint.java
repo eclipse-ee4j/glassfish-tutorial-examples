@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,31 +10,32 @@
 
 package jakarta.tutorial.web.websocketbot;
 
-import jakarta.tutorial.web.websocketbot.encoders.UsersMessageEncoder;
-import jakarta.tutorial.web.websocketbot.encoders.ChatMessageEncoder;
-import jakarta.tutorial.web.websocketbot.encoders.InfoMessageEncoder;
-import jakarta.tutorial.web.websocketbot.encoders.JoinMessageEncoder;
-import jakarta.tutorial.web.websocketbot.messages.ChatMessage;
-import jakarta.tutorial.web.websocketbot.messages.UsersMessage;
-import jakarta.tutorial.web.websocketbot.messages.JoinMessage;
-import jakarta.tutorial.web.websocketbot.messages.InfoMessage;
-import jakarta.tutorial.web.websocketbot.decoders.MessageDecoder;
-import jakarta.tutorial.web.websocketbot.messages.Message;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.enterprise.concurrent.ManagedExecutorService;
-import javax.inject.Inject;
-import javax.websocket.EncodeException;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.server.ServerEndpoint;
+
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.inject.Inject;
+import jakarta.tutorial.web.websocketbot.decoders.MessageDecoder;
+import jakarta.tutorial.web.websocketbot.encoders.ChatMessageEncoder;
+import jakarta.tutorial.web.websocketbot.encoders.InfoMessageEncoder;
+import jakarta.tutorial.web.websocketbot.encoders.JoinMessageEncoder;
+import jakarta.tutorial.web.websocketbot.encoders.UsersMessageEncoder;
+import jakarta.tutorial.web.websocketbot.messages.ChatMessage;
+import jakarta.tutorial.web.websocketbot.messages.InfoMessage;
+import jakarta.tutorial.web.websocketbot.messages.JoinMessage;
+import jakarta.tutorial.web.websocketbot.messages.Message;
+import jakarta.tutorial.web.websocketbot.messages.UsersMessage;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.OnClose;
+import jakarta.websocket.OnError;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.OnOpen;
+import jakarta.websocket.Session;
+import jakarta.websocket.server.ServerEndpoint;
 
 /* Websocket endpoint */
 @ServerEndpoint(

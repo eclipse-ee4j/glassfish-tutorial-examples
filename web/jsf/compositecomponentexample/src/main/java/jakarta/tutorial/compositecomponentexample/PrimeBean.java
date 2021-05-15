@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,8 +12,9 @@ package jakarta.tutorial.compositecomponentexample;
 
 import java.io.Serializable;
 import java.math.BigInteger;
-import javax.enterprise.inject.Model;
-import javax.validation.constraints.Size;
+
+import jakarta.enterprise.inject.Model;
+import jakarta.validation.constraints.Size;
 
 @Model
 public class PrimeBean implements Serializable {

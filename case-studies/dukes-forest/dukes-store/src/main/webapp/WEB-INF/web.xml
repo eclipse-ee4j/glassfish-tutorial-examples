@@ -11,7 +11,7 @@
 
 -->
 
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app version="5.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
     <description>Dukes Forest Java EE 7 Tutotrial Example</description>
     <display-name>Dukes Forest</display-name>
     <distributable/>
@@ -20,24 +20,24 @@
         <param-value>true</param-value>
     </context-param>
     <context-param>
-        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+        <param-name>jakarta.faces.STATE_SAVING_METHOD</param-name>
         <param-value>client</param-value>
     </context-param>
     <context-param>
-        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-name>jakarta.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.xhtml</param-value>
     </context-param>
     <context-param>
-        <param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
+        <param-name>jakarta.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
         <param-value>true</param-value>
     </context-param>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
-        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <servlet-name>jakarta.ws.rs.core.Application</servlet-name>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
@@ -45,7 +45,7 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <servlet-name>jakarta.ws.rs.core.Application</servlet-name>
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
     <session-config>
@@ -73,10 +73,9 @@
         <auth-constraint>
             <role-name>ADMINS</role-name>
         </auth-constraint>
-    </security-constraint> 
-    
+    </security-constraint>
     <data-source>
-        <name>java:app/ForestDataSource</name>
+        <name>java:global/ForestDataSource</name>
         <class-name>org.apache.derby.jdbc.ClientDataSource</class-name>
         <server-name>localhost</server-name>
         <port-number>1527</port-number>

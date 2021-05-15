@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,11 +11,12 @@
 package jakarta.tutorial.addressbook.web.util;
 
 import java.util.List;
-import javax.faces.application.FacesMessage;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.model.SelectItem;
+
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.model.SelectItem;
 
 public class JsfUtil {
     
@@ -62,7 +63,7 @@ public class JsfUtil {
         return FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get(key);
     }
     
-    public static Object getObjectFromRequestParameter(String requestParameterName, Converter converter, UIComponent component) {
+    public static Object getObjectFromRequestParameter(String requestParameterName, Converter<Object> converter, UIComponent component) {
         String theId = JsfUtil.getRequestParameter(requestParameterName);
         return converter.getAsObject(FacesContext.getCurrentInstance(), component, theId);
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -13,10 +13,11 @@ package jakarta.tutorial.customer.ejb;
 import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.ejb.EJB;
+import jakarta.enterprise.inject.Model;
 import jakarta.tutorial.customer.data.Customer;
-import javax.annotation.PostConstruct;
-import javax.ejb.EJB;
-import javax.enterprise.inject.Model;
 
 /**
  *

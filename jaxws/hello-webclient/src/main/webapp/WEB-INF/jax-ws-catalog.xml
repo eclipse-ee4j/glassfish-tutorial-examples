@@ -12,6 +12,6 @@
 -->
 
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8080/helloservice/HelloService?wsdl" uri="wsdl/localhost_8080/helloservice/HelloService.wsdl"/>
-    <system systemId="http://localhost:8080/helloservice/HelloService?xsd=1" uri="wsdl/localhost_8080/helloservice/HelloService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/helloservice-war/HelloService?wsdl" uri="wsdl/localhost_8080/helloservice-war/HelloService.wsdl"/>
+    <system systemId="http://localhost:8080/helloservice-war/HelloService?xsd=1" uri="wsdl/localhost_8080/helloservice-war/HelloService.xsd_1.xsd"/>
 </catalog>
